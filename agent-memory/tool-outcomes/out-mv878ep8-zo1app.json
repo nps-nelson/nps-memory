@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mv878ep8-zo1app",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-r2pu6o416u",
+  "taskId": "v892v47hem",
+  "action": "terminal_exec",
+  "status": "succeeded",
+  "errorClass": "code\": 0,.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "✓ SUCCÈS DU TERMINAL CLOUD (Code de sortie 0) sur GitHub Actions (nps-nelson/nps-workspace) :\n\n{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"processed_time\": 0.7318,\n  \"data\": {\n    \"id\": \"7690278492289813781\",\n    \"region\": \"CA\",\n    \"title\": \"#greenscreenvideo \",\n    \"content_desc\": [],\n    \"cover\": \"https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oY1AO15WHBnEKAiI8AoIn49AAXCiwtfC13WBi3~tplv-tiktokx-dmt-logoccm:300:400:tos-alisg-i-0068/oEF7zA4naEGQWYx2AjBEi6CIAABivrQ57bAlE.jpeg?dr=8595&refresh_token=b7bde198&x-expires=1792072800&x-signature=pzF10NlcM0E724v2AmJSM7EQN2A%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=1d1a97fc&idc=useast5&biz_tag=tt_video&s=AWEME_DETAIL&sc=cover\",\n    \"ai_dynamic_cover\": \"https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oY1AO15WHBnEKAiI8AoIn49AAXCiwtfC13WBi3~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/oEF7zA4naEGQWYx2AjBEi6CIAABivrQ57bAlE.image?dr=8605&refresh_token=38096465&x-expires=1792072800&x-signature=ZeptvV1nUi%2FhftO3sgLsBHDntyE%3D&t=bacd0480&ps=4f5296ae&shp=d05b14bd&shcp=1d1a97fc&idc=useast5&biz_tag=tt_video&s=AWEME_DETAIL&sc=dynamic_cover\",\n    \"origin_cover\": \"https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUe32PEQQDAVfwcfzWF",
+  "createdAt": "2026-10-14T14:22:21.548Z"
+}
