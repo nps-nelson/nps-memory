@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPS Video Agent - Agent Intelligent de Téléchargement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-brand-500 selection:text-white">
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-700 flex items-center justify-center shadow-lg shadow-brand-500/30">
+                    <i data-lucide="bot" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg tracking-tight">NPS Video Agent</h1>
+                    <p class="text-xs text-slate-400">Agent Autonome & Multi-Sources</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button id="btn-settings" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition shadow-sm flex items-center space-x-2">
+                    <i data-lucide="settings" class="w-5 h-5"></i>
+                    <span class="text-sm font-medium hidden sm:inline">Paramètres</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-5xl w-full mx-auto p-4 sm:p-6 space-y-6">
+        <!-- Input Section -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl backdrop-blur">
+            <h2 class="text-xl font-bold mb-2 flex items-center space-x-2">
+                <i data-lucide="download-cloud" class="w-6 h-6 text-brand-500"></i>
+                <span>Télécharger une vidéo</span>
+            </h2>
+            <p class="text-sm text-slate-400 mb-6">Collez le lien de la vidéo (TikTok, YouTube, Instagram, etc.) pour lancer l'agent.</p>
+            
+            <div class="space-y-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i data-lucide="link" class="w-5 h-5 text-slate-500"></i>
+                    </div>
+                    <input type="url" id="video-url" placeholder="https://vm.tiktok.com/... ou https://youtube.com/..." class="w-full pl-12 pr-4 py-3.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition">
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center space-x-2 text-xs text-slate-400 w-full sm:w-auto">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i>
+                        <span>Tokens et clés API sécurisés en local (localStorage)</span>
+                    </div>
+                    <button id="btn-download" class="w-full sm:w-auto px-6 py-3.5 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl shadow-lg shadow-brand-600/30 transition flex items-center justify-center space-x-2">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                        <span>Lancer le téléchargement</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status & Logs Section -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl backdrop-blur">
+            <h3 class="text-lg font-bold mb-4 flex items-center space-x-2">
+                <i data-lucide="terminal" class="w-5 h-5 text-brand-500"></i>
+                <span>Journal d'activité & Agent Logs</span>
+            </h3>
+            <div id="logs-container" class="bg-slate-950 border border-slate-800 rounded-xl p-4 h-48 overflow-y-auto font-mono text-xs text-slate-300 space-y-2">
+                <div class="text-slate-500">[18:00:00] Agent initialisé. En attente d'une URL...</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h3 class="text-lg font-bold flex items-center space-x-2">
+                    <i data-lucide="key" class="w-5 h-5 text-brand-500"></i>
+                    <span>Configuration des clés API</span>
+                </h3>
+                <button id="btn-close-settings" class="p-2 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Token GitHub (Terminal / Runner)</label>
+                    <input type="password" id="input-github" placeholder="ghp_..." class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Clé API Gemini</label>
+                    <input type="password" id="input-gemini" placeholder="AIzaSy..." class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Clé API Jina Reader</label>
+                    <input type="password" id="input-jina" placeholder="jina_..." class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-brand-500">
+                </div>
+            </div>
+
+            <div class="flex justify-end space-x-3 pt-4 border-t border-slate-800">
+                <button id="btn-save-settings" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition shadow-md">
+                    Enregistrer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-4 text-center text-xs text-slate-500">
+        NPS Video Agent &bull; Propulsé par NPS.NELSON
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const modal = document.getElementById('settings-modal');
+        document.getElementById('btn-settings').addEventListener('click', () => modal.classList.remove('hidden'));
+        document.getElementById('btn-close-settings').addEventListener('click', () => modal.classList.add('hidden'));
+
+        document.getElementById('btn-save-settings').addEventListener('click', () => {
+            localStorage.setItem('nps_github_token', document.getElementById('input-github').value);
+            localStorage.setItem('nps_gemini_key', document.getElementById('input-gemini').value);
+            localStorage.setItem('nps_jina_key', document.getElementById('input-jina').value);
+            modal.classList.add('hidden');
+            const logs = document.getElementById('logs-container');
+            logs.innerHTML += `<div class="text-emerald-400">[${new Date().toLocaleTimeString()}] Configuration enregistrée avec succès.</div>`;
+            logs.scrollTop = logs.scrollHeight;
+        });
+
+        document.getElementById('btn-download').addEventListener('click', () => {
+            const url = document.getElementById('video-url').value;
+            const logs = document.getElementById('logs-container');
+            if (!url) {
+                logs.innerHTML += `<div class="text-rose-400">[${new Date().toLocaleTimeString()}] Erreur : Veuillez entrer une URL valide.</div>`;
+                return;
+            }
+            logs.innerHTML += `<div class="text-brand-400">[${new Date().toLocaleTimeString()}] Démarrage du téléchargement pour : ${url}</div>`;
+            logs.scrollTop = logs.scrollHeight;
+        });
+    </script>
+</body>
+</html>
