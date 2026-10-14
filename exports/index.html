@@ -11,7 +11,7 @@
     <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center shadow-lg">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center shadow-lg shadow-indigo-500/30">
                     <i data-lucide="bot" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
@@ -19,14 +19,71 @@
                     <p class="text-xs text-slate-400">Agent Autonome & Multi-Sources</p>
                 </div>
             </div>
+            <button id="btn-settings" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition flex items-center space-x-2">
+                <i data-lucide="settings" class="w-5 h-5"></i>
+                <span class="text-sm font-medium">Paramètres API</span>
+            </button>
         </div>
     </header>
-    <main class="max-w-4xl mx-auto px-4 py-12 flex-1 w-full">
+
+    <main class="flex-1 max-w-4xl mx-auto w-full p-4 md:p-6 space-y-6">
         <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-            <h2 class="text-xl font-bold mb-4">Téléchargez votre application</h2>
-            <p class="text-slate-400 mb-6">Le fichier HTML complet de l'agent de téléchargement interactif est prêt et disponible ci-dessous.</p>
+            <h2 class="text-xl font-bold mb-2 flex items-center space-x-2">
+                <i data-lucide="download-cloud" class="text-indigo-400"></i>
+                <span>Télécharger une vidéo</span>
+            </h2>
+            <p class="text-sm text-slate-400 mb-4">Collez le lien de la vidéo (TikTok, YouTube, etc.) pour lancer l'agent de téléchargement.</p>
+            <div class="flex gap-3">
+                <input type="text" id="url-input" placeholder="https://vm.tiktok.com/..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500 text-slate-200">
+                <button id="btn-download" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-xl transition flex items-center space-x-2 shadow-lg shadow-indigo-600/20">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Lancer</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-md p-6 space-y-4 shadow-2xl">
+                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                    <h3 class="font-bold text-lg flex items-center space-x-2">
+                        <i data-lucide="key" class="text-indigo-400 w-5 h-5"></i>
+                        <span>Configuration des Clés API</span>
+                    </h3>
+                    <button id="close-settings" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+                </div>
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Token GitHub (Terminal / Workspace)</label>
+                        <input type="password" id="gh-token" placeholder="ghp_..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Clé API Gemini</label>
+                        <input type="password" id="gemini-key" placeholder="AIza..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Clé Jina Reader API</label>
+                        <input type="password" id="jina-key" placeholder="jina_..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+                <div class="flex justify-end space-x-3 pt-3 border-t border-slate-800">
+                    <button id="save-settings" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium px-4 py-2 rounded-xl transition">Enregistrer</button>
+                </div>
+            </div>
         </div>
     </main>
-    <script>lucide.createIcons();</script>
+
+    <script>
+        lucide.createIcons();
+        const modal = document.getElementById('settings-modal');
+        document.getElementById('btn-settings').onclick = () => modal.classList.remove('hidden');
+        document.getElementById('close-settings').onclick = () => modal.classList.add('hidden');
+        document.getElementById('save-settings').onclick = () => {
+            localStorage.setItem('gh_token', document.getElementById('gh-token').value);
+            localStorage.setItem('gemini_key', document.getElementById('gemini-key').value);
+            localStorage.setItem('jina_key', document.getElementById('jina-key').value);
+            modal.classList.add('hidden');
+            alert('Paramètres enregistrés avec succès !');
+        };
+    </script>
 </body>
 </html>
