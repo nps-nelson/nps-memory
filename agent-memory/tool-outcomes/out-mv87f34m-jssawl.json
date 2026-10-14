@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mv87f34m-jssawl",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-r2pu6o416u",
+  "taskId": "lky95kbqg4",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "blocage http 403 / anti-robot.",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : BLOCAGE HTTP 403 / ANTI-ROBOT]\nLa plateforme cible bloque l'accès direct (HTTP 403 / détection de bot).\n→ Action requise : Répéter la même commande échouera systématiquement ! Utilise des en-têtes (User-Agent), cookies, Playwright, ou explique directement ce blocage à l'utilisateur sans tourner en rond.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n\n\n[DIAGNOSTIC AUTOMATIQUE : BLOCAGE HTTP 403 / ANTI-ROBOT]\nLa plateforme cible bloque l'accès direct (HTTP 403 / détection de bot).\n→ Action requise : R",
+  "createdAt": "2026-10-14T14:27:33.142Z"
+}
