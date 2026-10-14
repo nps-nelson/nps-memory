@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mv89bu0m-4d2tz9",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-r2pu6o416u",
+  "taskId": "q80gvo9mv8",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 1).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nself.report_error(str(e), e.format_traceback())\nFile \"/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py\", line 1165, in report_error\nself.trouble(f'{self._format_err(\"ERROR:\", self.Styles.ERROR)} {message}', *args, **kwargs)\nraise DownloadError(message, exc_info)\nyt_dlp.utils.DownloadError: ERROR: [TikTok] 7689085554188717342: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nWARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies\nERROR: [TikTok] 7689085554188717342: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U\nTraceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py\", line 1731, in wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/lib/python3.12/site-packages/yt_dlp/YoutubeDL.py\", line 1866, in __extract_info\n    ie_result = ie.extract(url)\n                ^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/lib/python3.12/site-packages/yt_dlp/extractor/common.py\", line 765, in extract\n    ie_result = self._real_extract(url)\n                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/lib/python3.",
+  "createdAt": "2026-10-14T15:21:00.598Z"
+}
