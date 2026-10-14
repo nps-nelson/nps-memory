@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mv8baofz-x8vh4e",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-r2pu6o416u",
+  "taskId": "a2jx55qirr",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 1).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nOn branch main\nYour branch is up to date with 'origin/main'.\nnothing to commit, working tree clean\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean\n\n\n[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nOn branch main\nYour branch is up to date with 'origin/main'.\nnothing to commit, working tree clean\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "createdAt": "2026-10-14T16:16:05.951Z"
+}
