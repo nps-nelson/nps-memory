@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mv877yzp-u2cgxt",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-r2pu6o416u",
+  "taskId": "v892v47hem",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "commande introuvable (code 127).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : COMMANDE INTROUVABLE (Code 127)]\nLa commande \"yt-dlp\" n'est pas installée sur le runner cloud.\n→ Action requise : Installe-la (ex: pip install -q yt-dlp ou sudo apt-get update && sudo apt-get install -y yt-dlp). Interdiction de relancer la même commande sans l'installer d'abord !",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 127) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'yt_dlp'\n/tmp/nps_cmd.sh: line 1: yt-dlp: command not found\n\n\n[DIAGNOSTIC AUTOMATIQUE : COMMANDE INTROUVABLE (Code 127)]\nLa commande \"yt-dlp\" n'est pas installée sur le runner cloud.\n→ Action requise : Installe-la (ex: pip install -q yt-dlp ou sudo apt-get update && sudo apt-get install -y yt-dlp). Interdiction de relancer la même commande sans l'installer d'abord !",
+  "createdAt": "2026-10-14T14:22:01.189Z"
+}
