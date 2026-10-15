@@ -1,20 +1,97 @@
-<!DOCTYPE html><html lang="fr" style="--a:#fb7185;--b:#f472b6;--c:#fbbf24"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><style>*{box-sizing:border-box;margin:0}
-html,body{height:100%}
-body{background:#0d0e14;color:#f3f1fb;font-family:'Space Grotesk',system-ui,sans-serif;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
-body:before{content:'';position:absolute;inset:0 0 45% 0;background:radial-gradient(120% 80% at 0% 0%,color-mix(in srgb,var(--a) 50%,transparent),transparent 62%),radial-gradient(100% 70% at 100% 0%,color-mix(in srgb,var(--c) 40%,transparent),transparent 62%);pointer-events:none}
-.top{position:relative;padding:34px 20px 0;width:100%}
-.title{font-size:28px;font-weight:700;line-height:1.15;letter-spacing:-.02em;min-height:64px;transition:opacity .3s,transform .3s}
-.sub{color:#aaa5c2;font-size:15px;margin-top:8px;line-height:1.4;min-height:42px;transition:opacity .3s}
-.stage{flex:1;min-height:0;display:grid;place-items:center;width:100%;position:relative;overflow:hidden}
-.foot{position:relative;padding-bottom:20px}
-.pct{font-size:54px;font-weight:700;letter-spacing:-.03em;line-height:1.1;background:linear-gradient(180deg,#fff,color-mix(in srgb,var(--a) 45%,#fff));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lbl{color:#7d7799;font-size:17px}
-.cancel{color:#aaa5c2;font:inherit;font-size:16px;background:none;border:0;padding:10px 24px;margin-top:4px}
-svg{fill:none;stroke:#fff;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
-.t{width:84px;height:84px;border-radius:26px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;box-shadow:0 12px 36px color-mix(in srgb,var(--a) 40%,transparent)}
-.t svg{width:40px;height:40px}
-@keyframes sp{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){*{animation-duration:14s!important}}
-.s{position:relative;width:236px;height:236px;display:grid;place-items:center}.s i{position:absolute;inset:50px;border-radius:50%;border:2px solid var(--a);opacity:0;animation:wv 3s ease-out infinite}.s i:nth-child(2){animation-delay:1s}.s i:nth-child(3){animation-delay:2s}.s .t{position:relative;border-radius:50%;width:104px;height:104px}.s .t svg{width:46px;height:46px}@keyframes wv{0%{transform:scale(.8);opacity:.8}100%{transform:scale(2.3);opacity:0}}</style></head><body><div class="top"><div class="title" id="title"></div><div class="sub" id="sub"></div></div><div class="stage"><div class="s"><i></i><i></i><i></i><div class="t"><svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></div></div></div><div class="foot"><div class="pct" id="pct">0%</div><div class="lbl" id="lbl"></div><button class="cancel">Annuler</button></div><script>window.STEPS=[["Téléchargement de ta vidéo","On récupère ta vidéo, patiente quelques secondes.","Préparation"],["Réception du fichier","La vidéo arrive sur ton téléphone.","Téléchargement"],["Presque terminé","On vérifie que le fichier est complet.","Vérification"]];var T=document.getElementById('title'),S=document.getElementById('sub'),P=document.getElementById('pct'),L=document.getElementById('lbl'),st=window.STEPS,N=3200,tot=st.length*N,t0=Date.now(),cur=-1;
-function show(k){T.style.opacity=0;S.style.opacity=0;T.style.transform='translateY(8px)';setTimeout(function(){T.textContent=st[k][0];S.textContent=st[k][1];L.textContent=st[k][2];T.style.opacity=1;S.style.opacity=1;T.style.transform='none'},280)}
-setInterval(function(){var e=(Date.now()-t0)%tot,k=Math.floor(e/N);P.textContent=Math.floor(e/tot*100)+'%';document.documentElement.style.setProperty('--p',e/tot);if(k!==cur){cur=k;show(k)}},100);</script></body></html>
+<!DOCTYPE html>
+<html lang="fr" style="--a:#fb7185;--b:#f472b6;--c:#fbbf24">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Onde de réception</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;width:100%;overflow:hidden}
+body{background:#0d0e14;color:#f3f1fb;font-family:'Space Grotesk',system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;position:relative;padding:24px 0}
+body:before{content:'';position:absolute;inset:0 0 30% 0;background:radial-gradient(140% 90% at 50% 20%,color-mix(in srgb,var(--a) 45%,transparent),transparent 65%),radial-gradient(120% 80% at 80% 10%,color-mix(in srgb,var(--c) 35%,transparent),transparent 60%);pointer-events:none;z-index:0}
+
+.top{position:relative;z-index:2;width:100%;padding:0 20px}
+.title{font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-.02em;min-height:60px;transition:opacity .3s,transform .3s}
+.sub{color:#aaa5c2;font-size:15px;margin-top:6px;line-height:1.4;min-height:40px;transition:opacity .3s}
+
+.stage{flex:1;width:100%;display:grid;place-items:center;position:relative;z-index:2;margin:10px 0}
+
+.s{position:relative;width:300px;height:300px;display:grid;place-items:center}
+.s i{position:absolute;inset:0;border-radius:50%;border:2px solid var(--a);opacity:0;animation:wv 3.5s cubic-bezier(0.2, 0.8, 0.4, 1) infinite}
+.s i:nth-child(1){animation-delay:0s}
+.s i:nth-child(2){animation-delay:0.8s}
+.s i:nth-child(3){animation-delay:1.6s}
+.s i:nth-child(4){animation-delay:2.4s}
+
+.t{position:relative;z-index:3;width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;box-shadow:0 15px 45px color-mix(in srgb,var(--a) 50%,transparent);animation:pulse-center 2s ease-in-out infinite}
+.t svg{width:52px;height:52px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;animation:arrow-dive 1.6s ease-in-out infinite}
+
+.foot{position:relative;z-index:2;width:100%;padding-bottom:10px}
+.pct{font-size:52px;font-weight:700;letter-spacing:-.03em;line-height:1.1;background:linear-gradient(180deg,#fff,color-mix(in srgb,var(--a) 45%,#fff));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lbl{color:#8b85a6;font-size:16px;margin-top:2px}
+.cancel{color:#aaa5c2;font:inherit;font-size:16px;background:none;border:0;padding:12px 32px;margin-top:12px;cursor:pointer;opacity:.8;transition:opacity .2s}
+.cancel:hover{opacity:1}
+
+@keyframes wv{
+  0%{transform:scale(0.3);opacity:0.9;border-width:3px}
+  70%{opacity:0.4;border-width:1.5px}
+  100%{transform:scale(1.35);opacity:0;border-width:1px}
+}
+
+@keyframes arrow-dive{
+  0%,100%{transform:translateY(-6px);opacity:0.6}
+  50%{transform:translateY(6px);opacity:1}
+}
+
+@keyframes pulse-center{
+  0%,100%{transform:scale(1);box-shadow:0 15px 45px color-mix(in srgb,var(--a) 50%,transparent)}
+  50%{transform:scale(1.06);box-shadow:0 20px 60px color-mix(in srgb,var(--a) 70%,transparent)}
+}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="title" id="title"></div>
+  <div class="sub" id="sub"></div>
+</div>
+
+<div class="stage">
+  <div class="s">
+    <i></i><i></i><i></i><i></i>
+    <div class="t">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <div class="pct" id="pct">0%</div>
+  <div class="lbl" id="lbl"></div>
+  <button class="cancel">Annuler</button>
+</div>
+
+<script>
+window.STEPS=[
+  ["Téléchargement de ta vidéo","On récupère ta vidéo, patiente quelques secondes.","Préparation"],
+  ["Réception du fichier","La vidéo arrive sur ton téléphone.","Téléchargement"],
+  ["Presque terminé","On vérifie que le fichier est complet.","Vérification"]
+];
+var T=document.getElementById('title'),S=document.getElementById('sub'),P=document.getElementById('pct'),L=document.getElementById('lbl'),st=window.STEPS,N=3200,tot=st.length*N,t0=Date.now(),cur=-1;
+function show(k){
+  T.style.opacity=0;S.style.opacity=0;T.style.transform='translateY(8px)';
+  setTimeout(function(){
+    T.textContent=st[k][0];S.textContent=st[k][1];L.textContent=st[k][2];
+    T.style.opacity=1;S.style.opacity=1;T.style.transform='none'
+  },280)
+}
+setInterval(function(){
+  var e=(Date.now()-t0)%tot,k=Math.floor(e/N);
+  P.textContent=Math.floor(e/tot*100)+'%';
+  if(k!==cur){cur=k;show(k)}
+},100);
+</script>
+</body>
+</html>
