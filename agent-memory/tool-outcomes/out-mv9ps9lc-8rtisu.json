@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mv9ps9lc-8rtisu",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-sr23yyrkjl",
+  "taskId": "jijhgzrklu",
+  "action": "extract_site",
+  "status": "succeeded",
+  "errorClass": "Fichiers récupérés : 18.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "✓ SUCCÈS DU TERMINAL CLOUD (Code de sortie 0) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nFichiers récupérés : 18\n-rw-r--r-- 1 runner runner 299K Oct 15 15:49 site-vocalremover.org.zip\n305277 site-vocalremover.org.zip\n",
+  "createdAt": "2026-10-15T15:49:27.313Z"
+}
