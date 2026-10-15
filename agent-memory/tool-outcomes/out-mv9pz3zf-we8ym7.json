@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mv9pz3zf-we8ym7",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-sr23yyrkjl",
+  "taskId": "gsq0bcxxg1",
+  "action": "extract_site",
+  "status": "succeeded",
+  "errorClass": "Fichiers récupérés : 62.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "✓ SUCCÈS DU TERMINAL CLOUD (Code de sortie 0) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nFichiers récupérés : 62\n-rw-r--r-- 1 runner runner 727K Oct 15 15:54 site-boppy.me.zip\n744075 site-boppy.me.zip\n",
+  "createdAt": "2026-10-15T15:54:46.636Z"
+}
