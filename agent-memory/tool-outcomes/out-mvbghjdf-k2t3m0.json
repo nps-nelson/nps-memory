@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvbghjdf-k2t3m0",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "r25banh9uk",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "total_count\":16,\"note\":\"All repos fetched.\",\"repos\":[{\"name\":\"Authentification\",\"private\":false,\"url\":\"https://github.com/nps-nelson/Authentification\",\"desc\":\"\"},{\"name\":.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n{\"total_count\":16,\"note\":\"All repos fetched.\",\"repos\":[{\"name\":\"Authentification\",\"private\":false,\"url\":\"https://github.com/nps-nelson/Authentification\",\"desc\":\"\"},{\"name\":\"Deux-Facteurs\",\"private\":true,\"url\":\"https://github.com/nps-nelson/Deux-Facteurs\",\"desc\":\"\"},{\"name\":\"fable-fast\",\"private\":false,\"url\":\"https://github.com/nps-nelson/fable-fast\",\"desc\":\"Agent IA Autonome & Intelligen\"},{\"name\":\"gims\",\"private\":true,\"url\":\"https://github.com/nps-nelson/gims\",\"desc\":\"PWA to APK — NPS.NELSON\"},{\"name\":\"Lien-Public\",\"private\":false,\"url\":\"https://github.com/nps-nelson/Lien-Public\",\"desc\":\"Dépôt de publication Liens Pub\"},{\"name\":\"Maker\",\"private\":true,\"url\":\"https://github.com/nps-nelson/Maker\",\"desc\":\"NPS Video Agent\"},{\"name\":\"media-reduit\",\"private\":true,\"url\":\"https://github.com/nps-nelson/media-reduit\",\"desc\":\"\"},{\"name\":\"MyBot\",\"private\":true,\"url\":\"https://github.com/nps-nelson/MyBot\",\"desc\":\"NPS Video Agent\"},{\"name\":\"nps-img\",\"private\":true,\"url\":\"https://github.com/nps-nelson/nps-img\",\"desc\":\"PWA to APK — NPS.NELSON\"},{\"name\":\"nps-magic\",\"private\":true,\"url\":\"https://github.com/nps-nelson/nps-magic\",\"desc\":\"PWA to APK — NPS.NELSON\"},{\"name\":\"nps-memory\",\"priv",
+  "createdAt": "2026-10-16T21:04:42.579Z"
+}
