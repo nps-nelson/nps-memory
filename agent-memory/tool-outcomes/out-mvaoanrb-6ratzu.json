@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvaoanrb-6ratzu",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-v631d0uas5",
+  "taskId": "qxwb799ty9",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 1).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nerror: src refspec main does not match any\nerror: failed to push some refs to 'https://github.com/nps-nelson/fable-fast.git'\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nhint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\nInitialized empty Git repository in /home/runner/work/nps-workspace/nps-workspace/deploy_final/.git/\nFrom https://github.com/nps-nelson/fable-fast\n * branch            main       -> FETCH_HEAD\n * [new branch]      main       -> origin/main\n[master 72d8593] Fix deployment\n 1 file changed, 1 insertion(+)\nerror: src refspec main does not match any\nerror: failed to push some refs to 'https://github.com/nps-nelson/fable-fast.git'\n\n\n[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nerror",
+  "createdAt": "2026-10-16T07:55:32.425Z"
+}
