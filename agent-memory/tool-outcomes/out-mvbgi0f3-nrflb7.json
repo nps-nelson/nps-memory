@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvbgi0f3-nrflb7",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "r25banh9uk",
+  "action": "api_call",
+  "status": "failed",
+  "errorClass": "ÉCHEC api_call (Status: 422) :.",
+  "diagnosis": "[DIAGNOSTIC API HTTP 422] Corps de requête invalide (422 Unprocessable Entity). Vérifie les champs du corps JSON.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC api_call (Status: 422) :\n\n{\n  \"message\": \"Invalid request.\\n\\n\\\"sha\\\" wasn't supplied.\",\n  \"documentation_url\": \"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\n  \"status\": \"422\"\n}\n\n\n[DIAGNOSTIC API HTTP 422] Corps de requête invalide (422 Unprocessable Entity). Vérifie les champs du corps JSON.",
+  "createdAt": "2026-10-16T21:05:04.672Z"
+}
