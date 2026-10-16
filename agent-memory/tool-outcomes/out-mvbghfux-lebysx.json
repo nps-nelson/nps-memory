@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvbghfux-lebysx",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "r25banh9uk",
+  "action": "api_call",
+  "status": "failed",
+  "errorClass": "ÉCHEC api_call (Status: 404) :.",
+  "diagnosis": "[DIAGNOSTIC API HTTP 404] Ressource introuvable (404 Not Found). Vérifie l'URL et le dépôt.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC api_call (Status: 404) :\n\n{\n  \"message\": \"Not Found\",\n  \"documentation_url\": \"https://docs.github.com/rest/repos/contents#get-repository-content\",\n  \"status\": \"404\"\n}\n\n\n[DIAGNOSTIC API HTTP 404] Ressource introuvable (404 Not Found). Vérifie l'URL et le dépôt.",
+  "createdAt": "2026-10-16T21:04:38.027Z"
+}
