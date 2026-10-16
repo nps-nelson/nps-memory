@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvbgjht2-59rkaq",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "r25banh9uk",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 128).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 128)]\nCause relevée dans la sortie :\nfatal: in unpopulated submodule 'repo_fable'\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 128) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nfatal: in unpopulated submodule 'repo_fable'\n\n\n[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 128)]\nCause relevée dans la sortie :\nfatal: in unpopulated submodule 'repo_fable'\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "createdAt": "2026-10-16T21:06:13.862Z"
+}
