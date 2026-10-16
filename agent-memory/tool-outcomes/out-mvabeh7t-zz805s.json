@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvabeh7t-zz805s",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-v631d0uas5",
+  "taskId": "5gnfd5e8mz",
+  "action": "web_fetch",
+  "status": "succeeded",
+  "errorClass": "Title: Site not found · GitHub Pages.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Contenu extrait de https://nps-nelson.github.io/fable-fast/ (via proxy Jina) :\n\nTitle: Site not found · GitHub Pages\n\nURL Source: https://nps-nelson.github.io/fable-fast/\n\nWarning: Target URL returned error 404: Not Found\n\nMarkdown Content:\n# 404\n\n**There isn't a GitHub Pages site here.**\n\nIf you're trying to publish one, [read the full documentation](https://help.github.com/pages/) to learn how to set up **GitHub Pages** for your repository, organization, or user account.\n\n[GitHub Status](https://githubstatus.com/) — [@githubstatus](https://twitter.com/githubstatus)\n\n[![Image 1](blob:http://localhost/6691b6771aee6d71f28885ba1e6cb58e)](https://nps-nelson.github.io/)[![Image 2](blob:http://localhost/a718d401a153f4ec3816bbbebdadb6c4)](https://nps-nelson.github.io/)\n\n\n[Fin du document : 694 caractères, tout est lu. Ne le relis pas.]",
+  "createdAt": "2026-10-16T01:54:35.561Z"
+}
