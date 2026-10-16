@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mva9ssqw-tc9j3k",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-jrygi8rofx",
+  "taskId": "3r68w7rogc",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 1).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nWARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies\nERROR: [TikTok] 7693366003794758944: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\n[vm.tiktok] Extracting URL: https://vm.tiktok.com/ZSgLMwCyS/\n[vm.tiktok] ZSgLMwCyS: Downloading webpage\n[TikTok] Extracting URL: https://www.tiktok.com/@eie.movie/video/7693366003794758944?_r=1&_t=ZS-9AadsVNgXHa\n[TikTok] 7693366003794758944: Downloading webpage\nWARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies\nERROR: [TikTok] 7693366003794758944: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U\n\n\n[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nWARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies\nERROR: [TikTok] 7693366003",
+  "createdAt": "2026-10-16T01:09:44.457Z"
+}
