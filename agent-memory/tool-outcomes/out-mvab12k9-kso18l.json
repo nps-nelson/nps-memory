@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvab12k9-kso18l",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-v631d0uas5",
+  "taskId": "idplatz55i",
+  "action": "api_call",
+  "status": "failed",
+  "errorClass": "ÉCHEC api_call (Status: 404) :.",
+  "diagnosis": "[DIAGNOSTIC API HTTP 404] Ressource introuvable (404 Not Found). Vérifie l'URL et le dépôt.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC api_call (Status: 404) :\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n<script src=\"/_aistudio-iframe.js?v=6634132a\"></script></head>\n<body>\n<pre>Cannot PUT /</pre>\n</body>\n</html>\n\n\n[DIAGNOSTIC API HTTP 404] Ressource introuvable (404 Not Found). Vérifie l'URL et le dépôt.",
+  "createdAt": "2026-10-16T01:44:10.041Z"
+}
