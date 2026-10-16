@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvbgmtao-euwoq2",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "r25banh9uk",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "commande introuvable (code 127).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : COMMANDE INTROUVABLE (Code 127)]\\nLa commande \"${missingCmd}\" n'est pas installée sur le runner cloud.\\n→ Action requise : Installe-la (ex: pip install -q ${missingCmd} ou sudo apt-get update && sudo apt-get install -y ${missingCmd}). Interdiction de relancer la même commande sans l'installer d'abord !`;\n  }\n  \n  if (lower.includes('403: forbidden') || lower.includes('http error 403') || lower.includes('sign in to confirm') || lower.includes('bot detection') || lower.includes('cloudflare')) {\n    return `[DIAGNOSTIC AUTOMATIQUE : BLOCAGE HTTP 403 / ANTI-ROBOT]\\nLa plateforme cible bloque l'accès direct (HTTP 403 / détection de bot).\\n→ Action requise : Répéter la même commande échouera systématiquement ! Utilise des en-têtes (User-Agent), cookies, Playwright, ou explique directement ce blocage à l'utilisateur sans tourner en rond.`;\n  }\n  \n  if (lower.includes('",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n<meta charset=\"UTF-8\"/>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover\"/>\n<title>NPS – Agent IA Autonome & Intelligent</title>\n<meta name=\"description\" content=\"NPS est un agent IA autonome de haut niveau doté de recherche web, vision/OCR, mémoire longue durée et exécution de code.\" />\n\n<!-- OpenGraph -->\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:title\" content=\"NPS – Agent IA Autonome & Intelligent\" />\n<meta property=\"og:description\" content=\"Découvrez NPS, votre agent IA autonome capable de recherche web, d'analyse d'images et d'exécution de code pour une productivité sans limites.\" />\n<meta property=\"og:image\" content=\"/assets/nps_sharing_card_1790425703552-DdY7pLGz.jpg\" />\n<meta property=\"og:site_name\" content=\"NPS\" />\n\n<!-- Twitter -->\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:title\" content=\"NPS – Agent IA Autonome & Intelligent\" />\n<meta name=\"twitter:description\" content=\"NPS est un agent IA autonome de haut niveau doté de recherche web, vision/OCR et exécution de co",
+  "createdAt": "2026-10-16T21:08:48.720Z"
+}
