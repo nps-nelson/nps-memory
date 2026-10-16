@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvabb4sp-wdq0tu",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-v631d0uas5",
+  "taskId": "ds4l5aawgw",
+  "action": "web_fetch",
+  "status": "succeeded",
+  "errorClass": "Title: REST API endpoints for GitHub Pages - GitHub Docs.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Contenu extrait de https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#create-a-github-pages-site (via proxy Jina) :\n\nTitle: REST API endpoints for GitHub Pages - GitHub Docs\n\nURL Source: https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28\n\nMarkdown Content:\n[Skip to main content](https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#main-content)\n\n[Skip to content](https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#main-content)\n\n1.   [](https://docs.github.com/en)\n2.   [GitHub Docs](https://docs.github.com/en)\n\nSelect your plan:\n\nFree, Pro, & Team\n\nSearch or ask Copilot/\n\nMenu\n\nEnglish\n\n[Sign up](https://github.com/signup?ref_cta=Sign+up&ref_loc=docs+header&ref_page=docs)\n\nCollapse sidebar\n\nExpand sidebar\n\n1.   [Home](https://docs.github.com/en \"Home\")\n2.   [REST API](https://docs.github.com/en/rest \"REST API\")\n3.   [Pages](https://docs.github.com/en/rest/pages \"Pages\")\n4.   Pages\n\n## [REST API](https://docs.github.com/en/rest)\n\nAPI Version: 2022-11-28\n\n*       *   [](https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#) \n\n*   [Quickstart](https://docs.github.com/en/rest/quickstart) \n*   About the REST API \n    ",
+  "createdAt": "2026-10-16T01:51:59.497Z"
+}
