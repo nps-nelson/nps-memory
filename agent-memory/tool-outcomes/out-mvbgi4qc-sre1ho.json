@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvbgi4qc-sre1ho",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "r25banh9uk",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "name\": \"index.html\",.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n{\n  \"name\": \"index.html\",\n  \"path\": \"index.html\",\n  \"sha\": \"a1563737fa1c9f85e4fda69786d8a57e13c8f90d\",\n  \"size\": 130,\n  \"url\": \"https://api.github.com/repos/nps-nelson/fable-fast/contents/index.html?ref=main\",\n  \"html_url\": \"https://github.com/nps-nelson/fable-fast/blob/main/index.html\",\n  \"git_url\": \"https://api.github.com/repos/nps-nelson/fable-fast/git/blobs/a1563737fa1c9f85e4fda69786d8a57e13c8f90d\",\n  \"download_url\": \"https://raw.githubusercontent.com/nps-nelson/fable-fast/main/index.html\",\n  \"type\": \"file\",\n  \"content\": \"PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY2hhcnNldD0iVVRG\\nLTgiPjx0aXRsZT5GYWJsZSBGYXN0PC90aXRsZT48L2hlYWQ+PGJvZHk+PGgx\\nPkZhYmxlIEZhc3QgRW4gTGlnbmU8L2gxPjwvYm9keT48L2h0bWw+Cg==\\n\",\n  \"encoding\": \"base64\",\n  \"_links\": {\n    \"self\": \"https://api.github.com/repos/nps-nelson/fable-fast/contents/index.html?ref=main\",\n    \"git\": \"https://api.github.com/repos/nps-nelson/fable-fast/git/blobs/a1563737fa1c9f85e4fda69786d8a57e13c8f90d\",\n    \"html\": \"https://github.com/nps-nelson/fable-fast/blob/main/index.html\"\n  }\n}\n",
+  "createdAt": "2026-10-16T21:05:10.260Z"
+}
