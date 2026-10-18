@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mve91yg3-w3541f",
+  "userId": "u_e93a2a60b8524fa68981db0806f1e25b",
+  "conversationId": "conv-g0dou0yxv1",
+  "taskId": "snzrlu18x6",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 1).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\ncp: cannot stat '../nps-memory/uploads/index.html': No such file or directory\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nCloning into 'Boss-Orange'...\ncp: cannot stat '../nps-memory/uploads/index.html': No such file or directory\n\n\n[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\ncp: cannot stat '../nps-memory/uploads/index.html': No such file or directory\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "createdAt": "2026-10-18T19:59:56.835Z"
+}
