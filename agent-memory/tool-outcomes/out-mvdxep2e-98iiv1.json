@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvdxep2e-98iiv1",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "zmnk4bcbcr",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "authentification git refusée.",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : AUTHENTIFICATION GIT REFUSÉE]\nLe dépôt distant a refusé l'authentification. Le runner reçoit le token GitHub de l'utilisateur (variable GH_TOKEN, git déjà configuré pour https://github.com/…).\n→ Action requise : vérifie que l'URL est bien de la forme https://github.com/<compte>/<dépôt>.git, que le dépôt existe et appartient au compte du token. Ne relance jamais la même commande à l'identique ; si le blocage persiste, explique-le tel quel à l'utilisateur.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 128) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nCloning into '/tmp/deploy_pages'...\n[main ce3a3e9] Mise à jour index.html\n 1 file changed, 10 insertions(+), 45 deletions(-)\nremote: Invalid username or token. Password authentication is not supported for Git operations.\nfatal: Authentication failed for 'https://github.com/nps-nelson/fable-fast.git/'\n\n\n[DIAGNOSTIC AUTOMATIQUE : AUTHENTIFICATION GIT REFUSÉE]\nLe dépôt distant a refusé l'authentification. Le runner reçoit le token GitHub de l'utilisateur (variable GH_TOKEN, git déjà configuré pour https://github.com/…).\n→ Action requise : vérifie que l'URL est bien de la forme https://github.com/<compte>/<dépôt>.git, que le dépôt existe et appartient au compte du token. Ne relance jamais la même commande à l'identique ; si le blocage persiste, explique-le tel quel à l'utilisateur.",
+  "createdAt": "2026-10-18T14:33:55.814Z"
+}
