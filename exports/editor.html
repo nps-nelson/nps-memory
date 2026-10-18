@@ -1,184 +1,44 @@
 <!DOCTYPE html>
-<html lang="fr" style="--a:#fb7185;--b:#f472b6;--c:#fbbf24">
+<html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Éditeur Interactif - NPS</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:#0d0e14;color:#f3f1fb;font-family:'Space Grotesk',system-ui,sans-serif;overflow:hidden}
-body{display:flex;flex-direction:column;position:relative}
-body:before{content:'';position:absolute;inset:0 0 45% 0;background:radial-gradient(120% 80% at 0% 0%,color-mix(in srgb,var(--a) 50%,transparent),transparent 62%),radial-gradient(100% 70% at 100% 0%,color-mix(in srgb,var(--c) 40%,transparent),transparent 62%);pointer-events:none;z-index:0}
-
-header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#13151f;border-bottom:1px solid #232638;position:relative;z-index:10}
-.logo{font-weight:700;font-size:18px;letter-spacing:-.02em;color:#fff}
-.actions-header{display:flex;gap:10px}
-button.btn{background:#232638;color:#f3f1fb;border:1px solid #333852;padding:8px 16px;border-radius:10px;font-weight:500;cursor:pointer;transition:background .2s}
-button.btn:hover{background:#333852}
-button.btn-primary{background:linear-gradient(135deg,var(--a),var(--b));border:0;color:#fff}
-
-.main-container{display:flex;flex:1;position:relative;z-index:1;overflow:hidden}
-.sidebar{width:280px;background:#13151f;border-right:1px solid #232638;padding:20px;display:flex;flex-direction:column;gap:20px;overflow-y:auto}
-.panel-section h3{font-size:14px;color:#aaa5c2;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
-.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.tool-btn{background:#1c1e2b;border:1px solid #2a2e43;padding:12px;border-radius:12px;color:#f3f1fb;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13px;transition:all .2s}
-.tool-btn:hover{border-color:var(--a);background:#252839}
-.tool-btn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
-
-.workspace{flex:1;display:grid;place-items:center;padding:20px;position:relative;background:#090a0f}
-.canvas-wrap{max-width:100%;max-height:100%;box-shadow:0 20px 50px rgba(0,0,0,0.5);border-radius:16px;overflow:hidden;background:#13151f;border:1px solid #232638}
-canvas{display:block;max-width:100%;height:auto}
-
-/* Modal Animation Onde de réception */
-.overlay{position:absolute;inset:0;background:rgba(13,14,20,0.92);backdrop-filter:blur(8px);z-index:100;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:space-between;padding:34px 20px 20px;opacity:0;pointer-events:none;transition:opacity .3s}
-.overlay.active{opacity:1;pointer-events:all}
-.top-anim{position:relative;width:100%}
-.title-anim{font-size:28px;font-weight:700;line-height:1.15;letter-spacing:-.02em;min-height:64px;transition:opacity .3s,transform .3s}
-.sub-anim{color:#aaa5c2;font-size:15px;margin-top:8px;line-height:1.4;min-height:42px;transition:opacity .3s}
-.stage{flex:1;min-height:0;display:grid;place-items:center;width:100%;position:relative;overflow:hidden}
-.foot{position:relative;padding-bottom:10px}
-.pct{font-size:54px;font-weight:700;letter-spacing:-.03em;line-height:1.1;background:linear-gradient(180deg,#fff,color-mix(in srgb,var(--a) 45%,#fff));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lbl{color:#7d7799;font-size:17px}
-.cancel{color:#aaa5c2;font:inherit;font-size:16px;background:none;border:0;padding:10px 24px;margin-top:4px;cursor:pointer}
-.cancel:hover{color:#fff}
-svg.anim-icon{fill:none;stroke:#fff;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
-.t-icon{width:84px;height:84px;border-radius:26px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;box-shadow:0 12px 36px color-mix(in srgb,var(--a) 40%,transparent)}
-.t-icon svg{width:40px;height:40px}
-@keyframes wv{0%{transform:scale(.8);opacity:.8}100%{transform:scale(2.3);opacity:0}}
-.s-anim{position:relative;width:236px;height:236px;display:grid;place-items:center}
-.s-anim i{position:absolute;inset:50px;border-radius:50%;border:2px solid var(--a);opacity:0;animation:wv 3s ease-out infinite}
-.s-anim i:nth-child(2){animation-delay:1s}
-.s-anim i:nth-child(3){animation-delay:2s}
-.s-anim .t-icon{position:relative;border-radius:50%;width:104px;height:104px}
-.s-anim .t-icon svg{width:46px;height:46px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditeur de Photos Pro</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #121212; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .container { background: #1e1e1e; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); text-align: center; }
+        input[type="file"] { margin-bottom: 15px; }
+        canvas { max-width: 100%; height: auto; border-radius: 4px; margin-top: 15px; }
+    </style>
 </head>
 <body>
-
-<header>
-  <div class="logo">Éditeur Pro</div>
-  <div class="actions-header">
-    <button class="btn" id="btn-anim">Simuler Onde</button>
-    <button class="btn btn-primary" id="btn-export">Exporter</button>
-  </div>
-</header>
-
-<div class="main-container">
-  <div class="sidebar">
-    <div class="panel-section">
-      <h3>Outils</h3>
-      <div class="tools-grid">
-        <button class="tool-btn" data-tool="crop">
-          <svg viewBox="0 0 24 24"><path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
-          Rogner
-        </button>
-        <button class="tool-btn" data-tool="filter">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Filtres
-        </button>
-        <button class="tool-btn" data-tool="adjust">
-          <svg viewBox="0 0 24 24"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
-          Ajuster
-        </button>
-        <button class="tool-btn" data-tool="text">
-          <svg viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
-          Texte
-        </button>
-      </div>
+    <div class="container">
+        <h2>Éditeur de Photos</h2>
+        <input type="file" id="upload" accept="image/*">
+        <br>
+        <canvas id="canvas"></canvas>
     </div>
-  </div>
+    <script>
+        const upload = document.getElementById('upload');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
 
-  <div class="workspace">
-    <div class="canvas-wrap">
-      <canvas id="canvas" width="600" height="400"></canvas>
-    </div>
-  </div>
-</div>
-
-<!-- Overlay Onde de réception -->
-<div class="overlay" id="animOverlay">
-  <div class="top-anim">
-    <div class="title-anim" id="title"></div>
-    <div class="sub-anim" id="sub"></div>
-  </div>
-  <div class="stage">
-    <div class="s-anim">
-      <i></i><i></i><i></i>
-      <div class="t-icon">
-        <svg class="anim-icon" viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
-      </div>
-    </div>
-  </div>
-  <div class="foot">
-    <div class="pct" id="pct">0%</div>
-    <div class="lbl" id="lbl"></div>
-    <button class="cancel" id="btnCancel">Annuler</button>
-  </div>
-</div>
-
-<script>
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = '#1c1e2b';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.fillStyle = '#8c85a8';
-ctx.font = '20px Space Grotesk';
-ctx.textAlign = 'center';
-ctx.fillText('Glissez une image ou utilisez les outils', canvas.width/2, canvas.height/2);
-
-const STEPS = [
-  ["Téléchargement de ta vidéo","On récupère ta vidéo, patiente quelques secondes.","Préparation"],
-  ["Réception du fichier","La vidéo arrive sur ton téléphone.","Téléchargement"],
-  ["Presque terminé","On vérifie que le fichier est complet.","Vérification"]
-];
-
-const overlay = document.getElementById('animOverlay');
-const T = document.getElementById('title');
-const S = document.getElementById('sub');
-const P = document.getElementById('pct');
-const L = document.getElementById('lbl');
-const N = 3200;
-const tot = STEPS.length * N;
-let t0 = 0, cur = -1, animInterval = null;
-
-function showStep(k) {
-  T.style.opacity = 0;
-  S.style.opacity = 0;
-  T.style.transform = 'translateY(8px)';
-  setTimeout(() => {
-    T.textContent = STEPS[k][0];
-    S.textContent = STEPS[k][1];
-    L.textContent = STEPS[k][2];
-    T.style.opacity = 1;
-    S.style.opacity = 1;
-    T.style.transform = 'none';
-  }, 280);
-}
-
-function startAnim() {
-  t0 = Date.now();
-  cur = -1;
-  overlay.classList.add('active');
-  animInterval = setInterval(() => {
-    let e = (Date.now() - t0) % tot;
-    let k = Math.floor(e / N);
-    let percent = Math.floor((e / tot) * 100);
-    P.textContent = percent + '%';
-    if (k !== cur) {
-      cur = k;
-      showStep(k);
-    }
-  }, 100);
-}
-
-function stopAnim() {
-  clearInterval(animInterval);
-  overlay.classList.remove('active');
-}
-
-document.getElementById('btn-anim').addEventListener('click', startAnim);
-document.getElementById('btnCancel').addEventListener('click', stopAnim);
-</script>
+        upload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>
