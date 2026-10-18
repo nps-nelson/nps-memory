@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvdy1kkk-vzvpng",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "idcxlm1e74",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "sha\": \"2cd4401928f6bc5dd914d44d4c4d92774db17239\",.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n[\n  {\n    \"name\": \".gitkeep\",\n    \"path\": \"exports/.gitkeep\",\n    \"sha\": \"29e87897aaaa02ac1860c5c5caa5667f62a23960\",\n    \"size\": 30,\n    \"url\": \"https://api.github.com/repos/nps-nelson/nps-memory/contents/exports/.gitkeep?ref=main\",\n    \"html_url\": \"https://github.com/nps-nelson/nps-memory/blob/main/exports/.gitkeep\",\n    \"git_url\": \"https://api.github.com/repos/nps-nelson/nps-memory/git/blobs/29e87897aaaa02ac1860c5c5caa5667f62a23960\",\n    \"download_url\": \"https://raw.githubusercontent.com/nps-nelson/nps-memory/main/exports/.gitkeep\",\n    \"type\": \"file\",\n    \"_links\": {\n      \"self\": \"https://api.github.com/repos/nps-nelson/nps-memory/contents/exports/.gitkeep?ref=main\",\n      \"git\": \"https://api.github.com/repos/nps-nelson/nps-memory/git/blobs/29e87897aaaa02ac1860c5c5caa5667f62a23960\",\n      \"html\": \"https://github.com/nps-nelson/nps-memory/blob/main/exports/.gitkeep\"\n    }\n  },\n  {\n    \"name\": \"Boppy-dark.svg\",\n    \"path\": \"exports/Boppy-dark.svg\",\n    \"sha\": \"c0ee64e221138a88584fc48e12de8c506f7d807f\",\n    \"size\": 3221,\n    \"url\": \"https://api.github.com/repos/nps-nelson/nps-memory/contents/exports/Boppy-dark.svg?ref=main\",\n    \"html_url\": \"https://github.com/nps-nel",
+  "createdAt": "2026-10-18T14:51:43.076Z"
+}
