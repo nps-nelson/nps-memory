@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvdy208m-asyavd",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "idcxlm1e74",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "name\": \"editor.html\",.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n{\n  \"name\": \"editor.html\",\n  \"path\": \"exports/editor.html\",\n  \"sha\": \"ff9b28f17ad052fcc75f45f947e86e6aa61ec2fa\",\n  \"size\": 1702,\n  \"url\": \"https://api.github.com/repos/nps-nelson/nps-memory/contents/exports/editor.html?ref=main\",\n  \"html_url\": \"https://github.com/nps-nelson/nps-memory/blob/main/exports/editor.html\",\n  \"git_url\": \"https://api.github.com/repos/nps-nelson/nps-memory/git/blobs/ff9b28f17ad052fcc75f45f947e86e6aa61ec2fa\",\n  \"download_url\": \"https://raw.githubusercontent.com/nps-nelson/nps-memory/main/exports/editor.html\",\n  \"type\": \"file\",\n  \"content\": \"PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImZyIj4KPGhlYWQ+CiAgICA8\\nbWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9y\\ndCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxl\\nPTEuMCI+CiAgICA8dGl0bGU+w4lkaXRldXIgZGUgUGhvdG9zIFBybzwvdGl0\\nbGU+CiAgICA8c3R5bGU+CiAgICAgICAgYm9keSB7IGZvbnQtZmFtaWx5OiBz\\neXN0ZW0tdWksIHNhbnMtc2VyaWY7IGJhY2tncm91bmQ6ICMxMjEyMTI7IGNv\\nbG9yOiAjZmZmOyBkaXNwbGF5OiBmbGV4OyBmbGV4LWRpcmVjdGlvbjogY29s\\ndW1uOyBhbGlnbi1pdGVtczogY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IGNl\\nbnRlcjsgaGVpZ2h0OiAxMDB2aDsgbWFyZ2luOiAwOyB9CiAgICAgICAgLmNv\\nbnRhaW5lciB7IGJhY2tncm91bmQ6ICMxZTFlMWU7IHBhZGRpbmc6IDIwcHg",
+  "createdAt": "2026-10-18T14:52:03.382Z"
+}
