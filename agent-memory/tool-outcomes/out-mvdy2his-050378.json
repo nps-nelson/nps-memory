@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvdy2his-050378",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-x72rfch9u1",
+  "taskId": "idcxlm1e74",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "name\": \"index.html\",.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n{\n  \"name\": \"index.html\",\n  \"path\": \"index.html\",\n  \"sha\": \"cf7074c89c427511675fd0b7b421435a40656b9f\",\n  \"size\": 3739,\n  \"url\": \"https://api.github.com/repos/nps-nelson/fable-fast/contents/index.html?ref=main\",\n  \"html_url\": \"https://github.com/nps-nelson/fable-fast/blob/main/index.html\",\n  \"git_url\": \"https://api.github.com/repos/nps-nelson/fable-fast/git/blobs/cf7074c89c427511675fd0b7b421435a40656b9f\",\n  \"download_url\": \"https://raw.githubusercontent.com/nps-nelson/fable-fast/main/index.html\",\n  \"type\": \"file\",\n  \"content\": \"PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImZyIj4KPGhlYWQ+CjxtZXRh\\nIGNoYXJzZXQ9IlVURi04Ii8+CjxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250\\nZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wLCBt\\nYXhpbXVtLXNjYWxlPTEuMCwgbWluaW11bS1zY2FsZT0xLjAsIHVzZXItc2Nh\\nbGFibGU9bm8sIHZpZXdwb3J0LWZpdD1jb3ZlciIvPgo8dGl0bGU+RmFibGUg\\nRmFzdCDigJMgQWdlbnQgSUEgQXV0b25vbWUgJiBJbnRlbGxpZ2VudDwvdGl0\\nbGU+CjxtZXRhIG5hbWU9ImRlc2NyaXB0aW9uIiBjb250ZW50PSJGYWJsZSBG\\nYXN0IGVzdCB1biBhZ2VudCBJQSBhdXRvbm9tZSBkZSBoYXV0IG5pdmVhdSBk\\nb3TDqSBkZSByZWNoZXJjaGUgd2ViLCB2aXNpb24vT0NSLCBtw6ltb2lyZSBs\\nb25ndWUgZHVyw6llIGV0IGV4w6ljdXRpb24gZGUgY29kZS4iIC8+CjxtZXRh\\nIHByb3BlcnR5PSJvZzp0eXBlIiBjb250ZW",
+  "createdAt": "2026-10-18T14:52:25.780Z"
+}
