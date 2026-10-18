@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mve8z7ey-wfw49t",
+  "userId": "u_e93a2a60b8524fa68981db0806f1e25b",
+  "conversationId": "conv-g0dou0yxv1",
+  "taskId": "a943xtyxy8",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "id\": 1424763657,.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 201\n\n{\n  \"id\": 1424763657,\n  \"node_id\": \"R_kgDOVOwrCQ\",\n  \"name\": \"Boss-Orange\",\n  \"full_name\": \"nps-nelson/Boss-Orange\",\n  \"private\": false,\n  \"owner\": {\n    \"login\": \"nps-nelson\",\n    \"id\": 335629583,\n    \"node_id\": \"U_kgDOFAFNDw\",\n    \"avatar_url\": \"https://avatars.githubusercontent.com/u/335629583?v=4\",\n    \"gravatar_id\": \"\",\n    \"url\": \"https://api.github.com/users/nps-nelson\",\n    \"html_url\": \"https://github.com/nps-nelson\",\n    \"followers_url\": \"https://api.github.com/users/nps-nelson/followers\",\n    \"following_url\": \"https://api.github.com/users/nps-nelson/following{/other_user}\",\n    \"gists_url\": \"https://api.github.com/users/nps-nelson/gists{/gist_id}\",\n    \"starred_url\": \"https://api.github.com/users/nps-nelson/starred{/owner}{/repo}\",\n    \"subscriptions_url\": \"https://api.github.com/users/nps-nelson/subscriptions\",\n    \"organizations_url\": \"https://api.github.com/users/nps-nelson/orgs\",\n    \"repos_url\": \"https://api.github.com/users/nps-nelson/repos\",\n    \"events_url\": \"https://api.github.com/users/nps-nelson/events{/privacy}\",\n    \"received_events_url\": \"https://api.github.com/users/nps-nelson/received_events\",\n    \"type\": \"User\",\n    \"user_view_type\": \"public\"",
+  "createdAt": "2026-10-18T19:57:48.491Z"
+}
