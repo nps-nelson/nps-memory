@@ -1,44 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Éditeur de Photos Pro</title>
-    <style>
-        body { font-family: system-ui, sans-serif; background: #121212; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .container { background: #1e1e1e; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); text-align: center; }
-        input[type="file"] { margin-bottom: 15px; }
-        canvas { max-width: 100%; height: auto; border-radius: 4px; margin-top: 15px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éditeur de Photos Professionnel</title>
+<style>
+  :root { --bg: #121214; --surface: #1a1b1e; --primary: #3b82f6; --text: #f3f4f6; --border: #27272a; }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+  body { background: var(--bg); color: var(--text); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+  h1 { font-size: 1.2rem; font-weight: 600; }
+  .main { display: flex; flex: 1; overflow: hidden; }
+  sidebar { width: 320px; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; padding: 20px; gap: 20px; overflow-y: auto; }
+  .workspace { flex: 1; display: flex; justify-content: center; align-items: center; background: #09090b; position: relative; overflow: hidden; padding: 20px; }
+  canvas { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border-radius: 4px; }
+  .group { display: flex; flex-direction: column; gap: 8px; }
+  label { font-size: 0.85rem; color: #9ca3af; display: flex; justify-content: space-between; }
+  input[type="range"] { width: 100%; accent-color: var(--primary); }
+  button, .btn { background: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 6px; font-weight: 500; cursor: pointer; text-align: center; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+  button:hover { opacity: 0.9; }
+  .btn-secondary { background: var(--border); color: var(--text); }
+  .dropzone { border: 2px dashed var(--border); padding: 40px; text-align: center; border-radius: 8px; cursor: pointer; }
+  .dropzone:hover { border-color: var(--primary); }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h2>Éditeur de Photos</h2>
-        <input type="file" id="upload" accept="image/*">
-        <br>
-        <canvas id="canvas"></canvas>
+<header>
+  <h1>Éditeur de Photos Pro</h1>
+  <div style="display:flex; gap:10px;">
+    <button class="btn-secondary" onclick="resetImage()">Réinitialiser</button>
+    <button onclick="downloadImage()">Télécharger</button>
+  </div>
+</header>
+<div class="main">
+  <sidebar>
+    <div id="upload-section" class="group">
+      <label>Importer une image</label>
+      <div class="dropzone" onclick="document.getElementById('file-input').click()">
+        Glissez une image ici ou cliquez
+      </div>
+      <input type="file" id="file-input" accept="image/*" style="display:none" onchange="loadImage(event)">
     </div>
-    <script>
-        const upload = document.getElementById('upload');
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
+    <div class="group">
+      <label>Luminosité <span id="val-brightness">100</span>%</label>
+      <input type="range" id="brightness" min="0" max="200" value="100" oninput="applyFilters()">
+    </div>
+    <div class="group">
+      <label>Contraste <span id="val-contrast">100</span>%</label>
+      <input type="range" id="contrast" min="0" max="200" value="100" oninput="applyFilters()">
+    </div>
+    <div class="group">
+      <label>Saturation <span id="val-saturation">100</span>%</label>
+      <input type="range" id="saturation" min="0" max="200" value="100" oninput="applyFilters()">
+    </div>
+    <div class="group">
+      <label>Flou <span id="val-blur">0</span>px</label>
+      <input type="range" id="blur" min="0" max="20" value="0" oninput="applyFilters()">
+    </div>
+  </sidebar>
+  <div class="workspace">
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  let img = new Image();
+  let originalPixels = null;
 
-        upload.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (event) => {
-                    const img = new Image();
-                    img.onload = () => {
-                        canvas.width = img.width;
-                        canvas.height = img.height;
-                        ctx.drawImage(img, 0, 0);
-                    };
-                    img.src = event.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
+  function loadImage(e) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      img.onload = function() {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+        originalPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      }
+      img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  }
+
+  function applyFilters() {
+    if (!originalPixels) return;
+    const b = document.getElementById('brightness').value;
+    const c = document.getElementById('contrast').value;
+    const s = document.getElementById('saturation').value;
+    const bl = document.getElementById('blur').value;
+
+    document.getElementById('val-brightness').innerText = b;
+    document.getElementById('val-contrast').innerText = c;
+    document.getElementById('val-saturation').innerText = s;
+    document.getElementById('val-blur').innerText = bl;
+
+    ctx.filter = `brightness(${b}%) contrast(${c}%) saturate(${s}%) blur(${bl}px)`;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0);
+  }
+
+  function resetImage() {
+    if (!originalPixels) return;
+    ['brightness', 'contrast', 'saturation'].forEach(id => document.getElementById(id).value = 100);
+    document.getElementById('blur').value = 0;
+    applyFilters();
+  }
+
+  function downloadImage() {
+    if (!originalPixels) return;
+    const link = document.createElement('a');
+    link.download = 'edited-photo.png';
+    link.href = canvas.toDataURL();
+    link.click();
+  }
+
+  // Image par défaut pour test immédiat
+  img.onload = function() {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+    originalPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  };
+  img.src = 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800';
+</script>
 </body>
 </html>
