@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvf4a6o7-jw9ldh",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-g0dou0yxv1",
+  "taskId": "gwcam29vi8",
+  "action": "api_call",
+  "status": "failed",
+  "errorClass": "ÉCHEC api_call (Status: 422) :.",
+  "diagnosis": "[DIAGNOSTIC API HTTP 422] Corps de requête invalide (422 Unprocessable Entity). Vérifie les champs du corps JSON.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC api_call (Status: 422) :\n\n{\n  \"message\": \"content is not valid Base64\",\n  \"documentation_url\": \"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\n  \"status\": \"422\"\n}\n\n\n[DIAGNOSTIC API HTTP 422] Corps de requête invalide (422 Unprocessable Entity). Vérifie les champs du corps JSON.",
+  "createdAt": "2026-10-19T10:34:08.840Z"
+}
