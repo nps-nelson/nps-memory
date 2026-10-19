@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvf4jp1n-t4h55x",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-g0dou0yxv1",
+  "taskId": "k58k0sibzm",
+  "action": "terminal_exec",
+  "status": "succeeded",
+  "errorClass": "status\": \"401\".",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "✓ SUCCÈS DU TERMINAL CLOUD (Code de sortie 0) sur GitHub Actions (nps-nelson/nps-workspace) :\n\n{\r\n  \"message\": \"Bad credentials\",\r\n  \"documentation_url\": \"https://docs.github.com/rest\",\r\n  \"status\": \"401\"\r\n}",
+  "createdAt": "2026-10-19T10:41:32.555Z"
+}
