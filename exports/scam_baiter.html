@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScamBaiter Pro - Outil de Défense et Contre-Mesure</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-8 border-b border-slate-800 pb-6">
+            <div>
+                <h1 class="text-3xl font-extrabold bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
+                    <i class="fa-solid fa-shield-cat mr-2"></i>ScamBaiter Pro
+                </h1>
+                <p class="text-slate-400 text-sm mt-1">Outil défensif pour faire perdre du temps aux arnaqueurs et analyser les menaces.</p>
+            </div>
+            <div class="mt-4 md:mt-0 flex gap-2">
+                <span class="px-3 py-1 bg-red-950/80 border border-red-800/50 text-red-400 rounded-full text-xs font-semibold flex items-center">
+                    <span class="w-2 h-2 bg-red-500 rounded-full animate-ping mr-2"></span> Mode Défensif Actif
+                </span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Panneau 1 : Générateur de réponses absurdes -->
+            <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+                <h2 class="text-xl font-bold mb-4 flex items-center text-amber-400">
+                    <i class="fa-solid fa-comments mr-2"></i> Générateur de Réponses Chronophages
+                </h2>
+                <p class="text-slate-400 text-sm mb-4">Sélectionnez un profil de personnage naïf mais extrêmement bavard pour épuiser l'escroc et saturer sa boîte de réception.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+                    <button onclick="setPersona('grandmere')" id="btn-grandmere" class="persona-btn p-3 rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-left transition cursor-pointer">
+                        <div class="font-bold text-sm text-amber-300">Grand-mère Gertrude</div>
+                        <div class="text-xs text-slate-400 mt-1">Confond tout, parle de ses chats et de cuisine.</div>
+                    </button>
+                    <button onclick="setPersona('technophile')" id="btn-technophile" class="persona-btn p-3 rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-left transition cursor-pointer">
+                        <div class="font-bold text-sm text-amber-300">Gérard le Paumé</div>
+                        <div class="text-xs text-slate-400 mt-1">N'y comprend rien à l'informatique, clique partout.</div>
+                    </button>
+                    <button onclick="setPersona('philosophe')" id="btn-philosophe" class="persona-btn p-3 rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-left transition cursor-pointer">
+                        <div class="font-bold text-sm text-amber-300">Señor Complot</div>
+                        <div class="text-xs text-slate-400 mt-1">Paranoïaque, pose des questions sans fin.</div>
+                    </button>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Message reçu de l'arnaqueur (pour contexte) :</label>
+                    <textarea id="scam-input" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-amber-500 text-slate-200" placeholder="Collez le message de l'escroc ici..."></textarea>
+                </div>
+
+                <button onclick="generateBaitResponse()" class="w-full bg-gradient-to-r from-amber-600 to-red-600 hover:from-amber-500 hover:to-red-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center cursor-pointer">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Générer une réponse piège
+                </button>
+
+                <div class="mt-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Réponse générée prête à envoyer :</span>
+                        <button onclick="copyResponse()" class="text-xs text-amber-400 hover:underline flex items-center cursor-pointer">
+                            <i class="fa-solid fa-copy mr-1"></i> Copier
+                        </button>
+                    </div>
+                    <div id="output-box" class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-300 min-h-[100px] whitespace-pre-wrap">Sélectionnez un profil et cliquez sur générer...</div>
+                </div>
+            </div>
+
+            <!-- Panneau 2 : Analyseur de menaces & Indicateurs -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xl font-bold mb-4 flex items-center text-red-400">
+                        <i class="fa-solid fa-magnifying-glass-chart mr-2"></i> Analyseur d'Indices
+                    </h2>
+                    <p class="text-slate-400 text-sm mb-4">Vérifiez rapidement les signaux d'alerte dans un message suspect.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl">
+                            <div class="text-xs font-bold text-slate-300">Fautes d'orthographe & grammaire</div>
+                            <div id="chk-grammar" class="text-xs text-slate-500 mt-1">En attente d'analyse...</div>
+                        </div>
+                        <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl">
+                            <div class="text-xs font-bold text-slate-300">Urgence / Pression financière</div>
+                            <div id="chk-urgency" class="text-xs text-slate-500 mt-1">En attente d'analyse...</div>
+                        </div>
+                        <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl">
+                            <div class="text-xs font-bold text-slate-300">Liens ou IBAN suspects</div>
+                            <div id="chk-links" class="text-xs text-slate-500 mt-1">En attente d'analyse...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-500 text-center">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1"></i> Ne partagez jamais vos vraies informations personnelles.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPersona = 'grandmere';
+
+        function setPersona(persona) {
+            currentPersona = persona;
+            document.querySelectorAll('.persona-btn').forEach(btn => {
+                btn.classList.remove('border-amber-500', 'bg-slate-800');
+            });
+            document.getElementById('btn-' + persona).classList.add('border-amber-500', 'bg-slate-800');
+        }
+
+        const responses = {
+            grandmere: [
+                饰演 "Oh mon petit, j'ai essayé de faire le virement avec ma machine à écrire mais le chat a dormi sur le clavier. Est-ce que les lingots d'or en chocolat marchent aussi pour la douane ? Bisous, Gertrude.",
+                "Bonjour monsieur le banquier du futur ! Mon petit-fils Kevin m'a dit que vous étiez très gentil. Par contre je ne trouve pas la touche 'Any Key' sur mon magnétoscope, est-ce grave pour le mandat cash ?"
+            ],
+            technophile: [
+                "Bonjour, j'ai branché votre lien sur ma prise USB de frigo mais le grille-pain s'est mis à clignoter en rouge. Est-ce que je dois formater mon micro-ondes avant de vous envoyer les codes paysafecard ?",
+                "Salut patron ! J'ai essayé de hacker le mainframe avec un tournevis cruciforme mais mon chat a coupé la box. Je relance le modem 56k tout de suite !"
+            ],
+            philosophe: [
+                "Avant de verser les 5000 euros en coupons PCS, dites-moi : l'argent n'est-il pas qu'une illusion créée par le cosmos ? Et pourquoi le colis est-il bloqué à Vesoul alors que l'univers est infini ?"
+            ]
+        };
+
+        function generateBaitResponse() {
+            const list = responses[currentPersona];
+            const text = list[Math.floor(Math.random() * list.length)];
+            document.getElementById('output-box').innerText = text;
+            
+            // Analyse rapide
+            const scamText = document.getElementById('scam-input').value.toLowerCase();
+            document.getElementById('chk-grammar').innerText = scamText.length > 5 ? "Indice détecté : Syntaxe automatisée / Traduction littérale." : "Texte trop court.";
+            document.getElementById('chk-urgency').innerText = (scamText.includes('urgent') || scamText.includes('immédiat') || scamText.includes('bloqué')) ? "🔴 Forte pression psychologique détectée !" : "🟢 Pas de pression évidente.";
+            document.getElementById('chk-links').innerText = (scamText.includes('http') || scamText.includes('www') || scamText.includes('@')) ? "🔴 Présence de liens ou contacts externes." : "Aucun lien détecté.";
+        }
+
+        function copyResponse() {
+            const text = document.getElementById('output-box').innerText;
+            navigator.clipboard.writeText(text);
+            alert("Réponse copiée dans le presse-papier !");
+        }
+
+        setPersona('grandmere');
+    </script>
+</body>
+</html>
