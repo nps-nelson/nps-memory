@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvkw63bc-gwy4i0",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-v8ulp7yx3m",
+  "taskId": "y3pyr9w7dq",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "commande introuvable (code 127).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : COMMANDE INTROUVABLE (Code 127)]\nLa commande \"rsvg-convert\" n'est pas installée sur le runner cloud.\n→ Action requise : Installe-la (ex: pip install -q rsvg-convert ou sudo apt-get update && sudo apt-get install -y rsvg-convert). Interdiction de relancer la même commande sans l'installer d'abord !",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 2) sur GitHub Actions (nps-nelson/nps-workspace) :\n\n/tmp/nps_cmd.sh: line 32: rsvg-convert: command not found\nls: cannot access 'visuel_developpeur.png': No such file or directory\n\n\n[DIAGNOSTIC AUTOMATIQUE : COMMANDE INTROUVABLE (Code 127)]\nLa commande \"rsvg-convert\" n'est pas installée sur le runner cloud.\n→ Action requise : Installe-la (ex: pip install -q rsvg-convert ou sudo apt-get update && sudo apt-get install -y rsvg-convert). Interdiction de relancer la même commande sans l'installer d'abord !",
+  "createdAt": "2026-10-23T11:33:37.992Z"
+}
