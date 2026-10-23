@@ -1,0 +1,24 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630' width='1200' height='630'>
+  <defs>
+    <linearGradient id='bg' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#0f172a'/>
+      <stop offset='100%' stop-color='#1e1b4b'/>
+    </linearGradient>
+    <linearGradient id='glow' x1='0%'' y1='0%' x2='100%' y2='0%'>
+      <stop offset='0%' stop-color='#3b82f6'/>
+      <stop offset='100%' stop-color='#8b5cf6'/>
+    </linearGradient>
+  </defs>
+  <rect width='1200' height='630' fill='url(#bg)'/>
+  <circle cx='600' cy='315' r='300' fill='url(#glow)' opacity='0.15' filter='blur(50px)'/>
+  <rect x='100' y='100' width='1000' height='430' rx='16' fill='#090d16' stroke='#334155' stroke-width='2'/>
+  <circle cx='140' cy='140' r='6' fill='#ef4444'/>
+  <circle cx='160' cy='140' r='6' fill='#f59e0b'/>
+  <circle cx='180' cy='140' r='6' fill='#10b981'/>
+  <text x='220' y='145' fill='#94a3b8' font-family='monospace' font-size='14'>portfolio-vansiem.dev — Full-Stack &amp; Mobile</text>
+  <text x='150' y='250' fill='#ffffff' font-family='system-ui, sans-serif' font-size='48' font-weight='bold'>Van'siem Fono Jeancy</text>
+  <text x='150' y='310' fill='#3b82f6' font-family='system-ui, sans-serif' font-size='24' font-weight='600'>Développeur Full-Stack &amp; Concepteur de Produits Digitaux</text>
+  <text x='150' y='380' fill='#94a3b8' font-family='monospace' font-size='18'>&lt;React /&gt;  •  &lt;React Native /&gt;  •  &lt;TypeScript /&gt;  •  &lt;Node.js /&gt;</text>
+  <rect x='150' y='430' width='200' height='48' rx='8' fill='url(#glow)'/>
+  <text x='185' y='461' fill='#ffffff' font-family='system-ui, sans-serif' font-size='16' font-weight='bold'>Explorer le code</text>
+</svg>
