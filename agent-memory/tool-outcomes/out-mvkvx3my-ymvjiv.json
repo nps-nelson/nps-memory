@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvkvx3my-ymvjiv",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-v8ulp7yx3m",
+  "taskId": "y3pyr9w7dq",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 1).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nError reading file \"visuel_developpeur.svg\": Error opening file /home/runner/work/nps-workspace/nps-workspace/visuel_developpeur.svg: No such file or directory\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nGet:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]\nHit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease\nGet:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]\nGet:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]\nGet:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]\nGet:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]\nGet:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [576 kB]\nGet:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [640 kB]\nGet:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]\nGet:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1400 kB]\nGet:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [310 kB]\nGet:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1706 kB]\nGet:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]\nGet:14 http://azure.archive.ubuntu.",
+  "createdAt": "2026-10-23T11:26:38.506Z"
+}
