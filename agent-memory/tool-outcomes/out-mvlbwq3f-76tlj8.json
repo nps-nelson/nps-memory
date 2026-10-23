@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvlbwq3f-76tlj8",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-zdcsxgondl",
+  "taskId": "d74ec3wlzh",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "body\": \"# Bitchat Android 2.0.3\\n\\nSigned phone and Wear OS builds from `v2.0.3` (source commit `dfc67dad41691128bc6e7425bd69f2f409cb5bbf`). Canonical unsigned outputs we.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n{\n  \"url\": \"https://api.github.com/repos/permissionlesstech/bitchat-android/releases/421257736\",\n  \"assets_url\": \"https://api.github.com/repos/permissionlesstech/bitchat-android/releases/421257736/assets\",\n  \"upload_url\": \"https://uploads.github.com/repos/permissionlesstech/bitchat-android/releases/421257736/assets{?name,label}\",\n  \"html_url\": \"https://github.com/permissionlesstech/bitchat-android/releases/tag/v2.0.3\",\n  \"id\": 421257736,\n  \"author\": {\n    \"login\": \"callebtc\",\n    \"id\": 93376500,\n    \"node_id\": \"U_kgDOBZDP9A\",\n    \"avatar_url\": \"https://avatars.githubusercontent.com/u/93376500?v=4\",\n    \"gravatar_id\": \"\",\n    \"url\": \"https://api.github.com/users/callebtc\",\n    \"html_url\": \"https://github.com/callebtc\",\n    \"followers_url\": \"https://api.github.com/users/callebtc/followers\",\n    \"following_url\": \"https://api.github.com/users/callebtc/following{/other_user}\",\n    \"gists_url\": \"https://api.github.com/users/callebtc/gists{/gist_id}\",\n    \"starred_url\": \"https://api.github.com/users/callebtc/starred{/owner}{/repo}\",\n    \"subscriptions_url\": \"https://api.github.com/users/callebtc/subscriptions\",\n    \"organizations_url\": \"https://api.github.com/users/callebtc/o",
+  "createdAt": "2026-10-23T18:54:14.811Z"
+}
