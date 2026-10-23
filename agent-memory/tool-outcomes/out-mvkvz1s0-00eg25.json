@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvkvz1s0-00eg25",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-v8ulp7yx3m",
+  "taskId": "y3pyr9w7dq",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "module python manquant.",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : MODULE PYTHON MANQUANT]\nLe module Python \"cairossvg\" n'est pas installé (paquet pip : cairossvg).\n→ Action requise : chaque commande tourne sur un runner NEUF, rien ne persiste d'une commande à l'autre. Mets l'installation ET le script dans la MÊME commande : pip install -q cairossvg && python3 ton_script.py",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 2) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nERROR: Could not find a version that satisfies the requirement cairossvg (from versions: none)\nERROR: No matching distribution found for cairossvg\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'cairossvg'\nls: cannot access 'visuel_developpeur.png': No such file or directory\n\n\n[DIAGNOSTIC AUTOMATIQUE : MODULE PYTHON MANQUANT]\nLe module Python \"cairossvg\" n'est pas installé (paquet pip : cairossvg).\n→ Action requise : chaque commande tourne sur un runner NEUF, rien ne persiste d'une commande à l'autre. Mets l'installation ET le script dans la MÊME commande : pip install -q cairossvg && python3 ton_script.py",
+  "createdAt": "2026-10-23T11:28:09.408Z"
+}
