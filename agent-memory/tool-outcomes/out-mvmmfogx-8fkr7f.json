@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvmmfogx-8fkr7f",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-1juwcb5hus",
+  "taskId": "9rwm11er5d",
+  "action": "terminal_exec",
+  "status": "succeeded",
+  "errorClass": "DOCTYPE html><html lang=\"fr\" class=\"scroll-smooth\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"preload\" a.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "✓ SUCCÈS DU TERMINAL CLOUD (Code de sortie 0) sur GitHub Actions (nps-nelson/nps-workspace) :\n\n<!DOCTYPE html><html lang=\"fr\" class=\"scroll-smooth\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"/_next/image?url=%2Fimages%2Fwelcome-fr.png&amp;w=384&amp;q=75 1x, /_next/image?url=%2Fimages%2Fwelcome-fr.png&amp;w=640&amp;q=75 2x\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"/_next/image?url=%2Fimages%2Fwelcome-fr.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2Fimages%2Fwelcome-fr.png&amp;w=828&amp;q=75 2x\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/008d67ad1160242d.css?dpl=dpl_5ej51sKSfffx72DbVRn5ug5DCvn8\" data-precedence=\"next\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/17971f6b0672e5a4.css?dpl=dpl_5ej51sKSfffx72DbVRn5ug5DCvn8\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/f54d2c861960aa55.js?dpl=dpl_5ej51sKSfffx72DbVRn5ug5DCvn8\"/><script src=\"/_next/static/chunks/44bfdd0b642bb022.js?dpl=dpl_5ej51sKSfffx72DbVRn5ug5DCvn8\" async=\"\"></script><script src=\"/_next/static/chunks/25ef16b69a31e3e7.js?dpl=dpl_5ej51sKSfffx72DbVRn5",
+  "createdAt": "2026-10-24T16:36:41.511Z"
+}
