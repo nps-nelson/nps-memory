@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvmhcx2b-rmusg5",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-1juwcb5hus",
+  "taskId": "vxacyzcrwe",
+  "action": "api_call",
+  "status": "succeeded",
+  "errorClass": "total_count\":17,\"note\":\"All repos fetched.\",\"repos\":[{\"name\":\"nps-memory\",\"private\":false,\"url\":\"https://github.com/nps-nelson/nps-memory\",\"desc\":\"Mémoire longue durée sé.",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "Status: 200\n\n{\"total_count\":17,\"note\":\"All repos fetched.\",\"repos\":[{\"name\":\"nps-memory\",\"private\":false,\"url\":\"https://github.com/nps-nelson/nps-memory\",\"desc\":\"Mémoire longue durée sécurisée\"},{\"name\":\"Maker\",\"private\":true,\"url\":\"https://github.com/nps-nelson/Maker\",\"desc\":\"NPS Video Agent\"},{\"name\":\"Editor-file\",\"private\":false,\"url\":\"https://github.com/nps-nelson/Editor-file\",\"desc\":\"Dépôt Boss Orange créé via NPS\"},{\"name\":\"nps-workspace\",\"private\":false,\"url\":\"https://github.com/nps-nelson/nps-workspace\",\"desc\":\"Espace de travail de l'agent N\"},{\"name\":\"fable-fast\",\"private\":false,\"url\":\"https://github.com/nps-nelson/fable-fast\",\"desc\":\"Agent IA Autonome & Intelligen\"},{\"name\":\"MyBot\",\"private\":true,\"url\":\"https://github.com/nps-nelson/MyBot\",\"desc\":\"NPS Video Agent\"},{\"name\":\"media-reduit\",\"private\":true,\"url\":\"https://github.com/nps-nelson/media-reduit\",\"desc\":\"\"},{\"name\":\"Authentification\",\"private\":false,\"url\":\"https://github.com/nps-nelson/Authentification\",\"desc\":\"\"},{\"name\":\"poush\",\"private\":true,\"url\":\"https://github.com/nps-nelson/poush\",\"desc\":\"PWA to APK — NPS.NELSON\"},{\"name\":\"nps-img\",\"private\":true,\"url\":\"https://github.com/nps-nelson/nps-img\",\"desc\":\"PWA to AP",
+  "createdAt": "2026-10-24T14:14:34.596Z"
+}
