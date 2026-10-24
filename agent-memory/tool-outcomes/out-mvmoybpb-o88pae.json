@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvmoybpb-o88pae",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-1juwcb5hus",
+  "taskId": "t0ocqhw4zm",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 1).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 1)]\nCause relevée dans la sortie :\nSyntaxError: invalid syntax\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 1) sur GitHub Actions (nps-nelson/nps-workspace) :\n\n  File \"<string>\", line 1\n    import base64, requests, os; token = os.environ.get('GITHUB_TOKEN'); path = 'exports/blowup_sources_complet.zip'; url = 'https://api.github.com/repos/nps-nelson/nps-memory/contents/' + path; headers = {'Authorization': f'token {token}', 'Accept': 'application/vnd.github.v3+json'}; r = requests.get(url, headers=headers); sha = r.json().get('sha') if r.status_code == 200 else None; content = base64.b64encode(open(path, 'rb').read()).decode('utf-8'); data = {'message': 'Upload blowup_sources_complet.zip', 'content': content}; if sha: data['sha'] = sha; resp = requests.put(url, headers=headers, json=data); print(resp.status_code, resp.json().get('commit', {}).get('sha'))\n                                                                                                                                                                                                                                                                                                                                                                                                               ",
+  "createdAt": "2026-10-24T17:47:10.656Z"
+}
