@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvmp2e3t-solghq",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-1juwcb5hus",
+  "taskId": "t0ocqhw4zm",
+  "action": "terminal_exec",
+  "status": "failed",
+  "errorClass": "échec du script (code 128).",
+  "diagnosis": "[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 128)]\nCause relevée dans la sortie :\nfatal: could not read Password for 'https://github.com': No such device or address\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "lesson": "Lire cette erreur avant une nouvelle tentative et changer de méthode.",
+  "evidence": "❌ ÉCHEC DU TERMINAL CLOUD (Code de sortie: 128) sur GitHub Actions (nps-nelson/nps-workspace) :\n\nCloning into 'mem_repo'...\n[main 8a913e8] Ajout du ZIP binaire complet\n 1 file changed, 0 insertions(+), 0 deletions(-)\n create mode 100644 exports/blowup_sources_complet.zip\nfatal: could not read Password for 'https://github.com': No such device or address\n\n\n[DIAGNOSTIC AUTOMATIQUE : ÉCHEC DU SCRIPT (Code 128)]\nCause relevée dans la sortie :\nfatal: could not read Password for 'https://github.com': No such device or address\n→ Action requise : explique cette cause précise à l'utilisateur et applique la correction adaptée (installer l'outil manquant, changer d'URL ou de méthode). Ne relance jamais la même commande à l'identique.",
+  "createdAt": "2026-10-24T17:50:20.393Z"
+}
