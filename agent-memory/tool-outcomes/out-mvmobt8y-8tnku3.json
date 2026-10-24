@@ -1,0 +1,13 @@
+{
+  "memoryId": "out-mvmobt8y-8tnku3",
+  "userId": "u_3602865057104b46bf7a0835bbc0bf14",
+  "conversationId": "conv-1juwcb5hus",
+  "taskId": "7f7ngeavjv",
+  "action": "terminal_exec",
+  "status": "succeeded",
+  "errorClass": "adding: index.html (deflated 83%).",
+  "diagnosis": "",
+  "lesson": "Réutiliser cette méthode, puis refaire une vérification actuelle.",
+  "evidence": "✓ SUCCÈS DU TERMINAL CLOUD (Code de sortie 0) sur GitHub Actions (nps-nelson/nps-workspace) :\n\n  adding: index.html (deflated 83%)\n  adding: www.blowup-app.com/ (stored 0%)\n  adding: www.blowup-app.com/icon.png?icon.867dbae2.png (deflated 1%)\n  adding: www.blowup-app.com/pl/ (stored 0%)\n  adding: www.blowup-app.com/pl/privacy-policy (deflated 74%)\n  adding: www.blowup-app.com/pl/start?ref=landing (deflated 72%)\n  adding: www.blowup-app.com/pl/terms-of-service (deflated 73%)\n  adding: www.blowup-app.com/es/ (stored 0%)\n  adding: www.blowup-app.com/es/privacy-policy (deflated 75%)\n  adding: www.blowup-app.com/es/start?ref=landing (deflated 73%)\n  adding: www.blowup-app.com/es/terms-of-service (deflated 74%)\n  adding: www.blowup-app.com/en/ (stored 0%)\n  adding: www.blowup-app.com/en/privacy-policy (deflated 75%)\n  adding: www.blowup-app.com/en/start?ref=landing (deflated 73%)\n  adding: www.blowup-app.com/en/terms-of-service (deflated 74%)\n  adding: www.blowup-app.com/index.html (deflated 83%)\n  adding: www.blowup-app.com/de/ (stored 0%)\n  adding: www.blowup-app.com/de/privacy-policy (deflated 74%)\n  adding: www.blowup-app.com/de/terms-of-service (deflated 74%)\n  adding: www.blowup-ap",
+  "createdAt": "2026-10-24T17:29:40.306Z"
+}
